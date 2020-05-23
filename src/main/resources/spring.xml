@@ -6,9 +6,9 @@
         <constructor-arg value="1"/>
         <constructor-arg value="John Smith"/>
     </bean>
-    <bean id="eventLogger" class="loggers.ConsoleEventLogger"/>
+    <import resource="loggers.xml"/>
     <bean id="app" class="App">
         <constructor-arg ref="client"/>
-        <constructor-arg ref="eventLogger"/>
+        <constructor-arg ref="cacheEventLogger"/>
     </bean>
 </beans>
